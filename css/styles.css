@@ -124,6 +124,15 @@ section {
     margin-bottom: 20px; /* Espaciado con otros elementos */
 }
 
+.imagen-center {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
 /* Estilo para imágenes */
 img {
     width: 48%; /* Mantiene el ancho original */
