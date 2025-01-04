@@ -1,0 +1,15 @@
+@use '../bases/generales' as vars;
+
+@media (max-width: 768px) {
+  header {
+    text-align: left;
+  }
+
+  nav ul {
+    flex-direction: column;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use 'bases/operaciones';
+@use 'components/footer';
+
+/* Variables */
+$color-fondo: #2c2c2c;
+$color-texto: #ffffff;
+$color-destacado: #800080;
+$color-texto-claro: #cccccc;
+$color-encabezado: #ffccff;
+
+$color-header-gradient: #333333;
+$color-nav-bg: #404040;
+
+$font-principal: 'Roboto', sans-serif;
+
+/* Mixin para sombras */
+@mixin box-shadow($x: 0, $y: 4px, $blur: 8px, $color: rgba(0, 0, 0, 0.5)) {
+    box-shadow: $x $y $blur $color;
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+}
+
+/* Mixin para transiciones */
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+/* Estilos globales */
+body {
+    background-color: $color-fondo;
+    color: $color-texto;
+    font-family: $font-principal;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 1400px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, $color-header-gradient, $color-destacado);
+    border-bottom: 2px solid $color-destacado;
+    @include box-shadow;
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: $color-encabezado;
+        text-shadow: 2px 2px 4px #000;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+nav {
+    text-align: center;
+    background-color: $color-nav-bg;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid $color-destacado;
+    @include box-shadow;
+    @include transition(transform 0.3s ease);
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        color: $color-encabezado;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $color-texto;
+                font-weight: bold;
+                font-size: 1.2em;
+                padding: 10px 20px;
+                border: 2px solid $color-destacado;
+                border-radius: 5px;
+                @include box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.4));
+                @include transition(background-color 0.3s, color 0.3s, transform 0.2s ease-in-out);
+                display: inline-block;
+
+                &:hover {
+                    background-color: $color-destacado;
+                    color: $color-texto;
+                    transform: translateY(-3px);
+                }
+
+                &:focus {
+                    outline: 2px dashed $color-texto;
+                    outline-offset: 4px;
+                }
+            }
+
+            p {
+                margin-top: 5px;
+                font-size: 0.95em;
+                color: $color-texto-claro;
+            }
+        }
+    }
+}
