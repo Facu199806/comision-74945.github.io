@@ -11,75 +11,81 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/logo.webp" alt="Logo del blog" class="d-inline-block align-text-top custom-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Contenedor del menú centrado -->
+            <ul class="navbar-nav mx-auto w-50 justify-content-around">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/recursos.html">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
     <!-- Encabezado -->
-    <header>
+    <header class="text-center my-5">
         <h1>Blog para el curso de Desarrollo Web</h1>
         <p>En este pequeño espacio verás todo el contenido que se necesita para aprender desarrollo web, gracias a la plataforma CoderHouse.</p>
     </header>
 
-    <!-- Contenido principal -->
-    <main>
-        <!-- Navegación hacia las demás secciones -->
-        <nav>
-            <h2>Menú de Navegación</h2>
-            <p>Explora las secciones principales de nuestro sitio:</p>
-            <ul>
-                <!-- Como estamos en /pages, para ir a index debemos subir un nivel: ../index.html -->
-                <li>
-                    <a href="../index.html">Inicio</a>
-                    <p>Vuelve a la página principal del blog.</p>
-                </li>
-                <li>
-                    <a href="servicios.html">Servicios</a>
-                    <p>Descubre los servicios que ofrecemos, desde desarrollo web hasta soluciones de IA personalizadas.</p>
-                </li>
-                <li>
-                    <a href="recursos.html">Recursos</a>
-                    <p>Accede a guías, tutoriales y materiales educativos para aprender más sobre estas tecnologías.</p>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                    <p>Contáctanos para obtener soporte técnico e indicar el problema sobre nuestros servicios.</p>
-                </li>
-            </ul>
-        </nav>
-
         <!-- Sección principal de la galería -->
-        <section>
+        <section class="my-5">
             <h2>Proyectos Generados con IA</h2>
             <p>En esta sección encontrarás diversas imágenes generadas mediante técnicas de inteligencia artificial.</p>
             
-            <div class="imagen-container">
+            <div class="imagen-container d-flex justify-content-around flex-wrap">
                 <img src="../img/ia-advanced-web.jpg" alt="Ejemplo de interfaz generada por IA" width="500" height="315" loading="lazy">
                 <img src="../img/codingconia.jpg" alt="Panel de control futurista con IA" width="500" height="315" loading="lazy">
             </div>
         
-            <div class="imagen-center">
+            <div class="imagen-center text-center my-4">
                 <img src="../img/webcoding.webp" alt="Descripción de la imagen" width="500" height="315" loading="lazy">
             </div>
         </section>
         
-        <section class="mb-4"> <!-- Segunda sección de imágenes -->
+        <!-- Segunda sección de imágenes -->
+        <section class="my-5">
             <h2 class="mb-3">Imágenes Generadas por IA</h2>
             <p>
                 Estas imágenes que estás viendo fueron generadas con inteligencia artificial (IA).  
                 Hay muchas herramientas en línea para generar este tipo de contenido. No solo imágenes,  
                 también videos, audios y contenido que no podrías imaginar.  
             </p>
-            <p class="mb-3">
+            <p class="mb-3 text-center">
                 <a href="https://app.leonardo.ai/image-generation" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Generar Imágenes con IA</a>
             </p>
             
-            <div class="imagen-container">
+            <div class="imagen-container d-flex justify-content-around flex-wrap">
                 <img src="../img/web-developer-ia.jpg" alt="Desarrollador web con IA" width="500" height="315" loading="lazy">
             </div>
         </section>
-        </main>
-        
-    <footer>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="text-center py-3 bg-dark text-white">
         <p><strong>© 2024 Facundo E. Vilches</strong> - Todos los derechos reservados</p>
-        <p>Correo: <a href="mailto:facundovilches1998@gmail.com">facundovilches1998@gmail.com</a></p>
+        <p>Correo: <a href="mailto:facundovilches1998@gmail.com" class="text-white">facundovilches1998@gmail.com</a></p>
     </footer>
+
+    <!-- Script de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

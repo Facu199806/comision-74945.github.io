@@ -148,6 +148,11 @@ img:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
+.custom-logo {
+    width: 80px; /* Ajusta el ancho */
+    height: auto; /* Mantiene la proporción */
+  }
+
 /* Botón de llamada a la acción (CTA) */
 .button {
     display: inline-block;

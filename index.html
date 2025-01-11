@@ -11,44 +11,49 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.webp" alt="Logo del blog" class="d-inline-block align-text-top custom-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Contenedor del menú centrado -->
+            <ul class="navbar-nav mx-auto w-50 justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link" href="pages/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/recursos.html">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/galeria.html">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+      
     <!-- Encabezado -->
-    <header>
+    <header class="text-center my-5">
         <h1>Blog para el curso de Desarrollo Web</h1>
         <p>En este pequeño espacio verás todo el contenido que se necesita para aprender desarrollo web, gracias a la plataforma CoderHouse.</p>
     </header>
 
     <!-- Contenido principal -->
-    <main>
-        <!-- Navegación hacia los demás archivos html -->
-        <nav>
-            <h2>Menú de Navegación</h2>
-            <p>Explora las secciones principales de nuestro sitio:</p>
-            <ul>
-                <li>
-                    <a href="pages/servicios.html">Servicios</a>
-                    <p>Descubre los servicios que ofrecemos, desde desarrollo web hasta soluciones de IA personalizadas.</p>
-                </li>
-                <li>
-                    <a href="pages/recursos.html">Recursos</a>
-                    <p>Accede a guías, tutoriales y materiales educativos para aprender más sobre estas tecnologías.</p>
-                </li>
-                <li>
-                    <a href="pages/galeria.html">Galería</a>
-                    <p>Observa ejemplos de proyectos generados con inteligencia artificial.</p>
-                </li>
-                <li>
-                    <a href="pages/contacto.html">Contacto</a>
-                    <p>Contáctanos para obtener soporte técnico e indicar el problema sobre nuestros servicios.</p>
-                </li>
-            </ul>
-        </nav>
-
+    <main class="container">
         <!-- Sección de video -->
-        <section>
+        <section class="my-5">
             <h2>Nahuel Lema (Co-Fundador de Coderhouse) y Niko Seguro (Profe de Desarrollo Web) te explican cómo hacer un sitio web responsive</h2>
             <p>¿Qué es importante a la hora de empezar en el desarrollo web? En estos videos verás lo importante que son las buenas prácticas.</p>
            <!-- Videos, tutorialales sobre sitios web responsive -->
-            <div class="video-container">
+            <div class="video-container d-flex justify-content-around flex-wrap">
                 <iframe 
                     src="https://www.youtube.com/embed/f_ZMFlEmq2w"
                     width="560"
@@ -71,12 +76,12 @@
         </section>
 
         <!-- Sección de imágenes y contenido -->
-        <section>
+        <section class="my-5">
             <article>
                 <h2>La evolución del desarrollo web</h2>
                 <h3>¿Qué es el Front-End y para qué sirve?</h3>
                 
-                <div class="imagen-container">
+                <div class="imagen-container d-flex justify-content-around flex-wrap">
                     <img src="img/front_end_.jpg" alt="Concepto visual de Front-End" width="500" height="315" loading="lazy">
                     <img src="img/habilidades.jpg" alt="Habilidades necesarias en desarrollo web" width="500" height="315" loading="lazy">
                 </div>
@@ -85,7 +90,7 @@
                 Estos tres elementos se encargan de dar forma a la parte frontal de un sitio web o aplicación.<br>
                 Esto incluye los fondos, colores, texto, animaciones o efectos.</p>
 
-                <div class="imagen-container">
+                <div class="imagen-container d-flex justify-content-around flex-wrap">
                     <img src="img/frontend-4342425_1280.png" alt="Ilustración de desarrollo Frontend" width="500" height="315" loading="lazy">
                     <img src="img/fronteback.png" alt="Comparación Frontend y Backend" width="500" height="315" loading="lazy">
                 </div>
@@ -93,18 +98,18 @@
         </section>
 
         <!-- Sección de CTA -->
-        <section>
+        <section class="text-center my-5">
             <h2>Visita el canal de Coder en YouTube:</h2>
             <p>↓</p>
-            <a href="https://www.youtube.com/@Coderhouse" class="button" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@Coderhouse" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                 Click aquí
             </a>
         </section>
     </main>
 
-    <Footer>
-        <p><strong>© 2024 Facundo E. Vilches</strong> - Todos los derechos reservados</p><!--Al cliquear en el correo, el mismo te lleva a enviar uno al destinatario que se encuentra en él-->
-        <p>Correo: <a href="mailto:facundovilches1998@gmail.com">facundovilches1998@gmail.com</a></p>
+    <footer class="text-center py-3 bg-dark text-white">
+        <p><strong>© 2024 Facundo E. Vilches</strong> - Todos los derechos reservados</p>
+        <p>Correo: <a href="mailto:facundovilches1998@gmail.com" class="text-white">facundovilches1998@gmail.com</a></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

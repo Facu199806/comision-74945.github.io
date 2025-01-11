@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicios de desarrollo web e inteligencia artificial - C0derina">
   <title>Servicios - C0derina</title>
   <!--Enlace a Bootstrap-->
   <link
@@ -14,41 +15,46 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- Encabezado principal -->
-  <header>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../img/logo.webp" alt="Logo del blog" class="d-inline-block align-text-top custom-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Contenedor del menú centrado -->
+        <ul class="navbar-nav mx-auto w-50 justify-content-around">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/galeria.html">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/recursos.html">Recursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="text-center my-5">
     <h1>El Futuro Está Aquí</h1>
     <p>Descubre cómo la tecnología está transformando nuestras vidas y el mundo que nos rodea.</p>
   </header>
 
   <!-- Contenido principal -->
-  <main>
-    <!-- Menú de Navegación (similar a index.html) -->
-    <nav>
-      <h2>Menú de Navegación</h2>
-      <p>Explora las secciones principales de nuestro sitio:</p>
-      <ul>
-        <!-- Ajusta las rutas según tu estructura de carpetas -->
-        <li>
-          <a href="../index.html">Inicio</a>
-          <p>Vuelve a la página principal del blog.</p>
-        </li>
-        <li>
-          <a href="recursos.html">Recursos</a>
-          <p>Accede a guías, tutoriales y materiales educativos para aprender más sobre estas tecnologías.</p>
-        </li>
-        <li>
-          <a href="galeria.html">Galería</a>
-          <p>Observa ejemplos de proyectos generados con inteligencia artificial.</p>
-        </li>
-        <li>
-          <a href="contacto.html">Contacto</a>
-          <p>Contáctanos para obtener soporte técnico e indicar el problema sobre nuestros servicios.</p>
-        </li>
-      </ul>
-    </nav>
+  <main class="container">
 
-    <!-- Secciones de contenido -->
-    <section>
+    <!-- Sección: La Revolución del Desarrollo Web -->
+    <section class="my-5">
       <h2>La Revolución del Desarrollo Web</h2>
       <p>
         El desarrollo web ha cambiado la manera en que interactuamos con la información
@@ -63,30 +69,36 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Sección: Servicios de Desarrollo Web -->
+    <section class="my-5">
       <h2>Servicios de Desarrollo Web</h2>
-      <div class="video-container">
+      <div class="video-container d-flex justify-content-around flex-wrap">
         <img
           src="../img/desarrollo-web-servicios.png"
           alt="Servicios de desarrollo web"
+          width="500"
+          height="315"
           loading="lazy"
         />
         <iframe
           src="https://www.youtube.com/embed/H52KJgHQyg0"
           title="Video sobre servicios de desarrollo web"
+          width="500"
+          height="315"
           allowfullscreen
           loading="lazy">
         </iframe>
       </div>
     </section>
 
-    <section>
+    <!-- Sección: Inteligencia Artificial -->
+    <section class="my-5">
       <h2>Inteligencia Artificial: Más Que Futuro, Presente</h2>
       <p>
         La IA no solo está transformando industrias, sino también la vida cotidiana.
         Desde asistentes virtuales hasta análisis de datos, su impacto es innegable.
       </p>
-      <blockquote>
+      <blockquote class="blockquote">
         "La inteligencia artificial es la herramienta que dará forma a un futuro más eficiente y conectado."
       </blockquote>
       <ul>
@@ -97,24 +109,30 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Sección: Avances en Inteligencia Artificial -->
+    <section class="my-5">
       <h2>Avances en Inteligencia Artificial</h2>
-      <div class="video-container">
+      <div class="video-container d-flex justify-content-around flex-wrap">
         <img
           src="../img/ia.jfif"
           alt="Inteligencia Artificial"
+          width="500"
+          height="315"
           loading="lazy"
         />
         <iframe
           src="https://www.youtube.com/embed/KzV05QRJNz8"
           title="Video sobre inteligencia artificial"
+          width="500"
+          height="315"
           allowfullscreen
           loading="lazy">
         </iframe>
       </div>
     </section>
 
-    <section>
+    <!-- Sección: Educación para un Mundo Digital -->
+    <section class="my-5">
       <h2>Educación para un Mundo Digital</h2>
       <p>
         Entender y aprovechar la tecnología es clave para el éxito en el siglo XXI.
@@ -126,32 +144,39 @@
         <li>Consultorías para equipos de trabajo</li>
         <li>Manuales prácticos para herramientas digitales</li>
       </ul>
-      <p>
+      <p class="text-center">
         <a
           href="https://www.coderhouse.com/ar/"
           target="_blank"
           rel="noopener noreferrer"
+          class="btn btn-primary"
         >
           Explora más sobre nuestros programas educativos
         </a>
       </p>
     </section>
 
-    <section>
+    <!-- Sección: Inteligencia Artificial Generativa -->
+    <section class="my-5">
       <h2>Inteligencia Artificial Generativa</h2>
       <p><strong>¿Qué es la IA generativa en términos simples? </strong><br>
-    <br>La IA generativa se refiere a los sistemas de inteligencia artificial que pueden generar nuevos contenidos,<br>
-    ideas o datos en función de su entrenamiento . Es como enseñarle a una computadora a ser creativa, permitiéndole <br>
-    producir todo, desde texto hasta imágenes, que nunca antes existieron</p>
-      <div class="video-container">
+        La IA generativa se refiere a los sistemas de inteligencia artificial que pueden generar nuevos contenidos,
+        ideas o datos en función de su entrenamiento. Es como enseñarle a una computadora a ser creativa, permitiéndole
+        producir todo, desde texto hasta imágenes, que nunca antes existieron.
+      </p>
+      <div class="video-container d-flex justify-content-around flex-wrap">
         <img
           src="../img/inteligencia-artificial-generativa.jpg"
           alt="Inteligencia Artificial Generativa"
+          width="500"
+          height="315"
           loading="lazy"
         />
         <iframe
           src="https://www.youtube.com/embed/4sbOh86TPRk"
           title="Video sobre inteligencia artificial generativa"
+          width="500"
+          height="315"
           allowfullscreen
           loading="lazy">
         </iframe>
@@ -159,13 +184,13 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Pie de página -->
+  <footer class="text-center py-3 bg-dark text-white">
     <p><strong>© 2024 Facundo E. Vilches</strong> - Todos los derechos reservados</p>
-    <!--Al cliquear en el correo, el mismo te lleva a enviar uno al destinatario que se encuentra en él-->
-    <p>Correo: <a href="mailto:facundovilches1998@gmail.com">facundovilches1998@gmail.com</a></p>
+    <p>Correo: <a href="mailto:facundovilches1998@gmail.com" class="text-white">facundovilches1998@gmail.com</a></p>
   </footer>
 
+  <!-- Script de Bootstrap -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
