@@ -1,10 +1,10 @@
 // Importaciones
-@use 'bases/_generales' as generales;
-@use 'bases/_operaciones' as operaciones;
-@use 'bases/_queries';
-@use 'components/_header';
-@use 'components/_main';
-@use 'components/_footer';
+@use './bases/generales' as generales;
+@use './bases/operaciones' as operaciones;
+@use './bases/queries';
+@use './components/header';
+@use './components/main';
+@use './components/footer';
 
 /* Estilos globales */
 body {
