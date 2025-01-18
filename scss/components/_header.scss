@@ -46,3 +46,23 @@ header {
       }
   }
 }
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.collapse {
+  &.show {
+    display: block !important;
+  }
+}
