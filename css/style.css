@@ -1,9 +1,10 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use '../bases/generales' as generales; // Variables generales (colores, fuentes, etc.)
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\style.scss 2:1  root stylesheet */
+/* Error: Undefined mixin.
+ *    ,
+ * 43 |         @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+ *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\bases\_operaciones.scss 43:9  @use
+ *   scss\style.scss 2:1                root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use '../bases/generales' as generales; // Variables generales (colores, fuentes, etc.)\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\style.scss 2:1  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 43 \2502          @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\bases\\_operaciones.scss 43:9  @use\a   scss\\style.scss 2:1                root stylesheet";
 }
