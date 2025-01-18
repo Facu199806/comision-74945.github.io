@@ -240,3 +240,33 @@ footer {
         opacity: 1;
     }
 }
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+form .form-control {
+    background: #2c2c2c;
+    border: 1px solid #800080;
+    color: #ffffff;
+}
+
+form .btn {
+    background-color: #800080;
+    border: none;
+}
+
+form .btn:hover {
+    background-color: #ffffff;
+    color: #800080;
+}
