@@ -166,13 +166,18 @@
                 Click aquí
             </a>
         </section>
-        <h2 class="text-center fade-in">Formulario de contacto</h2>
-        <form name="contact" method="POST" data-netlify="true" class="fade-in">
-            <input type="text" name="name" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <h2>Formulario de contacto</h2>
+<form id="contactForm" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
+  <input type="text" name="name" placeholder="Tu nombre" required>
+  <input type="email" name="email" placeholder="Tu correo" required>
+  <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+<div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+  <h3>¡Gracias por tu mensaje!</h3>
+  <p>Nos pondremos en contacto contigo pronto.</p>
+</div>
+
         
     </main>
 
@@ -180,6 +185,31 @@
         <p><strong>© 2024 Facundo E. Vilches</strong> - Todos los derechos reservados</p>
         <p>Correo: <a href="mailto:facundovilches1998@gmail.com" class="text-white">facundovilches1998@gmail.com</a></p>
     </footer>
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Evita que se recargue la página
+    
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+    
+        // Realiza el envío del formulario a Netlify
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString()
+        })
+        .then(() => {
+          // Oculta el formulario y muestra el mensaje de éxito
+          form.style.display = 'none';
+          successMessage.style.display = 'block';
+        })
+        .catch(error => {
+          console.error('Error al enviar el formulario:', error);
+          alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo nuevamente.');
+        });
+      }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
