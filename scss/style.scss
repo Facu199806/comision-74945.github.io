@@ -22,7 +22,7 @@ header {
     padding: 20px;
     background: linear-gradient(135deg, generales.$color-header-gradient, generales.$color-destacado);
     border-bottom: 2px solid generales.$color-destacado;
-    @include operaciones.box-shadow;
+    @include operaciones.box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
 
     h1 {
         font-size: 2.5em;
@@ -43,7 +43,7 @@ nav {
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid generales.$color-destacado;
-    @include operaciones.box-shadow;
+    @include operaciones.box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
     @include operaciones.transition(transform 0.3s ease);
 
     &:hover {
