@@ -1,10 +1,10 @@
-// Importaciones
-@use './bases/generales' as generales;
-@use './bases/operaciones' as operaciones;
-@use './bases/queries';
-@use './components/header';
-@use './components/main';
-@use './components/footer';
+// Importaciones de archivos base y componentes
+@use './bases/generales' as generales; // Variables generales (colores, fuentes, etc.)
+@use './bases/operaciones' as operaciones; // Mixins (box-shadow, transition, etc.)
+@use './bases/queries'; // Media queries
+@use './components/header'; // Estilos del header
+@use './components/main'; // Estilos del main
+@use './components/footer'; // Estilos del footer
 
 /* Estilos globales */
 body {
