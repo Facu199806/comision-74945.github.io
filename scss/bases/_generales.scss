@@ -1,3 +1,8 @@
+// _generales.scss
+$color-destacado: #800080;
+$color-fondo: #2c2c2c;
+$color-texto-claro: #cccccc;
+
 // Mixins globales (centralizar en operaciones.scss si no están ya)
 @mixin box-shadow($x: 0, $y: 4px, $blur: 8px, $color: rgba(0, 0, 0, 0.5)) {
   box-shadow: $x $y $blur $color;

@@ -1,23 +1,25 @@
+@use '../bases/generales' as vars; // Ajusta la ruta según tu estructura
+
 .footer {
-    border-top: 2px solid $color-destacado;
+    border-top: 2px solid vars.$color-destacado; // Uso del alias "vars"
     padding: 20px 0;
     text-align: center;
-    background-color: $color-fondo;
-    color: $color-texto-claro;
+    background-color: vars.$color-fondo;
+    color: vars.$color-texto-claro;
 
     // Sombra en el footer
-    @include box-shadow(0, -4px, 6px, rgba(0, 0, 0, 0.3));
+    @include vars.box-shadow(0, -4px, 6px, rgba(0, 0, 0, 0.3));
 
     p {
         margin: 0;
         font-size: 1rem;
 
         a {
-            color: $color-destacado;
+            color: vars.$color-destacado;
             text-decoration: none;
 
             &:hover {
-                color: lighten($color-destacado, 15%);
+                color: lighten(vars.$color-destacado, 15%);
                 text-decoration: underline;
             }
         }
@@ -31,20 +33,3 @@
         }
     }
 }
-
-    @include box-shadow(0, -4px, 6px, rgba(0, 0, 0, 0.3));
-
-    p {
-        margin: 0;
-        font-size: 1rem;
-
-        a {
-            color: $color-destacado;
-            text-decoration: none;
-
-            &:hover {
-                color: lighten($color-destacado, 15%);
-                text-decoration: underline;
-            }
-        }
-    }
