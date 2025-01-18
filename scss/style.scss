@@ -1,14 +1,16 @@
 // Importaciones
-@use 'components/footer';
-@use './bases/generales' as vars;
-@use './bases/operaciones';
-@use './bases/queries';
+@use 'bases/_generales' as generales;
+@use 'bases/_operaciones' as operaciones;
+@use 'bases/_queries';
+@use 'components/_header';
+@use 'components/_main';
+@use 'components/_footer';
 
 /* Estilos globales */
 body {
-    background-color: vars.$color-fondo;
-    color: vars.$color-texto;
-    font-family: vars.$font-principal;
+    background-color: generales.$color-fondo;
+    color: generales.$color-texto;
+    font-family: generales.$font-principal;
     margin: 0 auto;
     padding: 0;
     line-height: 1.6;
@@ -18,14 +20,14 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, vars.$color-header-gradient, vars.$color-destacado);
-    border-bottom: 2px solid vars.$color-destacado;
+    background: linear-gradient(135deg, generales.$color-header-gradient, generales.$color-destacado);
+    border-bottom: 2px solid generales.$color-destacado;
     @include operaciones.box-shadow;
 
     h1 {
         font-size: 2.5em;
         margin-bottom: 10px;
-        color: vars.$color-encabezado;
+        color: generales.$color-encabezado;
         text-shadow: 2px 2px 4px #000;
     }
 
@@ -36,11 +38,11 @@ header {
 
 nav {
     text-align: center;
-    background-color: vars.$color-nav-bg;
+    background-color: generales.$color-nav-bg;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 1px solid vars.$color-destacado;
+    border: 1px solid generales.$color-destacado;
     @include operaciones.box-shadow;
     @include operaciones.transition(transform 0.3s ease);
 
@@ -51,7 +53,7 @@ nav {
     h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
-        color: vars.$color-encabezado;
+        color: generales.$color-encabezado;
         text-shadow: 1px 1px 3px #000;
     }
 
@@ -65,24 +67,24 @@ nav {
         li {
             a {
                 text-decoration: none;
-                color: vars.$color-texto;
+                color: generales.$color-texto;
                 font-weight: bold;
                 font-size: 1.2em;
                 padding: 10px 20px;
-                border: 2px solid vars.$color-destacado;
+                border: 2px solid generales.$color-destacado;
                 border-radius: 5px;
                 @include operaciones.box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.4));
                 @include operaciones.transition(background-color 0.3s, color 0.3s, transform 0.2s ease-in-out);
                 display: inline-block;
 
                 &:hover {
-                    background-color: vars.$color-destacado;
-                    color: vars.$color-texto;
+                    background-color: generales.$color-destacado;
+                    color: generales.$color-texto;
                     transform: translateY(-3px);
                 }
 
                 &:focus {
-                    outline: 2px dashed vars.$color-texto;
+                    outline: 2px dashed generales.$color-texto;
                     outline-offset: 4px;
                 }
             }
@@ -90,7 +92,7 @@ nav {
             p {
                 margin-top: 5px;
                 font-size: 0.95em;
-                color: vars.$color-texto-claro;
+                color: generales.$color-texto-claro;
             }
         }
     }

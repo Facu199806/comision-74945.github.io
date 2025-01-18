@@ -1,9 +1,10 @@
-/* Error: Undefined variable.
+/* Error: Undefined mixin.
  *    ,
- * 10 |     color: vars.$color-texto;
- *    |            ^^^^^^^^^^^^^^^^^
+ * 42 |         @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+ *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *    '
- *   scss\style.scss 10:12  root stylesheet */
+ *   scss\bases\_operaciones.scss 42:9  @use
+ *   scss\style.scss 3:1                root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 10 \2502      color: vars.$color-texto;\d\a    \2502             ^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\style.scss 10:12  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 42 \2502          @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\bases\\_operaciones.scss 42:9  @use\a   scss\\style.scss 3:1                root stylesheet";
 }

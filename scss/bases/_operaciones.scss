@@ -1,5 +1,5 @@
-// _operaciones.scss
-@use './generales' as vars;
+@use 'sass:color'; // Habilita el módulo de color
+@use '../bases/_generales' as generales;
 
 // Mixin para transiciones reutilizable
 @mixin transition($properties...) {
@@ -38,10 +38,15 @@
     @include transition(background-color 0.3s ease, transform 0.2s ease-in-out);
 
     &:hover {
-        background-color: darken(vars.$color-destacado, 10%);
+        background-color: color.adjust(generales.$color-destacado, $lightness: -10%);
         transform: scale(1.1);
-        @include vars.box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+        @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
     }
+}
+
+// Mixin para aplicar sombra
+@mixin box-shadow($x: 0, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: $x $y $blur $color;
 }
 
 // Efecto hover para imágenes
