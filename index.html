@@ -114,24 +114,27 @@
        <section class="my-5">
         <h2>Contáctanos</h2>
         <p>Déjanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Tu nombre" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Tu correo" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Mensaje</label>
-                <textarea id="message" name="message" class="form-control" placeholder="Tu mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
-            <h3>¡Gracias por tu mensaje!</h3>
-            <p>Nos pondremos en contacto contigo pronto.</p>
-        </div>
+        <form id="contactForm" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Tu correo" required>
+          </div>
+          <div class="mb-3">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Tu mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+      <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+          <h3>¡Gracias por tu mensaje!</h3>
+          <p>Nos pondremos en contacto contigo pronto.</p>
+      </div>
+      
       </form>
     </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
