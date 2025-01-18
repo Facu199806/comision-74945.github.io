@@ -15,6 +15,7 @@ header {
     background: linear-gradient(135deg, #333333, #800080);
     border-bottom: 2px solid #800080;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out; /* Animación de entrada */
 }
 
 header h1 {
@@ -22,7 +23,9 @@ header h1 {
     margin-bottom: 10px;
     color: #ffccff;
     text-shadow: 2px 2px 4px #000;
+    animation: fadeIn 2s ease-in; /* Animación de desvanecimiento */
 }
+
 
 header p {
     font-size: 1.2em;
@@ -216,5 +219,24 @@ footer {
 
     p {
         font-size: 1.8em;
+    }
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
