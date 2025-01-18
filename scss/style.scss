@@ -1,35 +1,14 @@
-@use 'bases/operaciones';
+// Importaciones
 @use 'components/footer';
-
-/* Variables */
-$color-fondo: #2c2c2c;
-$color-texto: #ffffff;
-$color-destacado: #800080;
-$color-texto-claro: #cccccc;
-$color-encabezado: #ffccff;
-
-$color-header-gradient: #333333;
-$color-nav-bg: #404040;
-
-$font-principal: 'Roboto', sans-serif;
-
-/* Mixin para sombras */
-@mixin box-shadow($x: 0, $y: 4px, $blur: 8px, $color: rgba(0, 0, 0, 0.5)) {
-    box-shadow: $x $y $blur $color;
-    -webkit-box-shadow: $x $y $blur $color;
-    -moz-box-shadow: $x $y $blur $color;
-}
-
-/* Mixin para transiciones */
-@mixin transition($properties...) {
-    transition: $properties;
-}
+@use './bases/generales' as vars;
+@use './bases/operaciones';
+@use './bases/queries';
 
 /* Estilos globales */
 body {
-    background-color: $color-fondo;
-    color: $color-texto;
-    font-family: $font-principal;
+    background-color: vars.$color-fondo;
+    color: vars.$color-texto;
+    font-family: vars.$font-principal;
     margin: 0 auto;
     padding: 0;
     line-height: 1.6;
@@ -39,14 +18,14 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, $color-header-gradient, $color-destacado);
-    border-bottom: 2px solid $color-destacado;
-    @include box-shadow;
+    background: linear-gradient(135deg, vars.$color-header-gradient, vars.$color-destacado);
+    border-bottom: 2px solid vars.$color-destacado;
+    @include operaciones.box-shadow;
 
     h1 {
         font-size: 2.5em;
         margin-bottom: 10px;
-        color: $color-encabezado;
+        color: vars.$color-encabezado;
         text-shadow: 2px 2px 4px #000;
     }
 
@@ -57,13 +36,13 @@ header {
 
 nav {
     text-align: center;
-    background-color: $color-nav-bg;
+    background-color: vars.$color-nav-bg;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 1px solid $color-destacado;
-    @include box-shadow;
-    @include transition(transform 0.3s ease);
+    border: 1px solid vars.$color-destacado;
+    @include operaciones.box-shadow;
+    @include operaciones.transition(transform 0.3s ease);
 
     &:hover {
         transform: scale(1.02);
@@ -72,7 +51,7 @@ nav {
     h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
-        color: $color-encabezado;
+        color: vars.$color-encabezado;
         text-shadow: 1px 1px 3px #000;
     }
 
@@ -86,24 +65,24 @@ nav {
         li {
             a {
                 text-decoration: none;
-                color: $color-texto;
+                color: vars.$color-texto;
                 font-weight: bold;
                 font-size: 1.2em;
                 padding: 10px 20px;
-                border: 2px solid $color-destacado;
+                border: 2px solid vars.$color-destacado;
                 border-radius: 5px;
-                @include box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.4));
-                @include transition(background-color 0.3s, color 0.3s, transform 0.2s ease-in-out);
+                @include operaciones.box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.4));
+                @include operaciones.transition(background-color 0.3s, color 0.3s, transform 0.2s ease-in-out);
                 display: inline-block;
 
                 &:hover {
-                    background-color: $color-destacado;
-                    color: $color-texto;
+                    background-color: vars.$color-destacado;
+                    color: vars.$color-texto;
                     transform: translateY(-3px);
                 }
 
                 &:focus {
-                    outline: 2px dashed $color-texto;
+                    outline: 2px dashed vars.$color-texto;
                     outline-offset: 4px;
                 }
             }
@@ -111,8 +90,24 @@ nav {
             p {
                 margin-top: 5px;
                 font-size: 0.95em;
-                color: $color-texto-claro;
+                color: vars.$color-texto-claro;
             }
         }
     }
+}
+
+/* Animación fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
 }
