@@ -7,3 +7,37 @@
 @mixin transition($properties...) {
     transition: $properties;
 }
+// Animación de fade-in
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+// Transiciones generales
+.btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: darken($color-destacado, 10%);
+        transform: scale(1.05);
+    }
+}
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+}
