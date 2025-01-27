@@ -2,7 +2,7 @@
 body {
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif !important; 
     margin: 0;
     padding: 0;
     line-height: 1.6; /* Mejora la legibilidad general del texto */
