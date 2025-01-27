@@ -43,6 +43,19 @@
         @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
     }
 }
+.button {
+    background-color: $color-boton;
+    color: $color-boton-texto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $color-boton-hover;
+    }
+}
+
 
 // Mixin para aplicar sombra
 @mixin box-shadow($x: 0, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.2)) {

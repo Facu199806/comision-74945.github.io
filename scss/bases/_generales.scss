@@ -1,12 +1,29 @@
 // _generales.scss
 $color-fondo: #f4f4f4;
-$color-texto: #333;
-$font-principal: 'Ink Free, sans-serif '; 
+$color-texto: #333; 
 $color-header-gradient: #ff6b6b;
 $color-destacado: #007bff;
 $color-nav-bg: #eee;
 $color-encabezado: #222;
 $color-texto-claro: #666;
+$color-boton: #800080; // Color de fondo del botón
+$color-boton-hover: lighten($color-boton, 10%);
+$color-boton-texto: #ffffff;
+$font-principal: 'Roboto', sans-serif;
+
+body {
+    font-family: $font-principal;
+    margin: 20px;
+    padding: 0;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
 
 
 // Mixins globales (centralizar en operaciones.scss si no están ya)
@@ -21,6 +38,8 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  margin: 10px auto;
+    display: block;
   @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3)); // Agregar sombra globalmente
 }
 
