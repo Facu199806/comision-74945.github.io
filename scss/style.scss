@@ -5,13 +5,12 @@
 @use './components/_main'; // Estilos del main
 @use './components/_footer'; // Estilos del footer
 
-
 /* Estilos globales */
 body {
     background-color: generales.$color-fondo;
     color: generales.$color-texto;
     font-family: generales.$font-principal;
-    margin: 0 auto;
+    margin: 20px; // Espaciado global
     padding: 0;
     line-height: 1.6;
     max-width: 1400px;
@@ -23,7 +22,6 @@ header {
     padding: 20px;
     background: linear-gradient(135deg, generales.$color-header-gradient, generales.$color-destacado);
     border-bottom: 2px solid generales.$color-destacado;
-    
 
     h1 {
         font-size: 2.5em;
@@ -96,5 +94,21 @@ nav {
                 color: generales.$color-texto-claro;
             }
         }
+    }
+}
+
+/* Responsividad adicional */
+@include queries.small {
+    body {
+        margin: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 16px;
     }
 }
