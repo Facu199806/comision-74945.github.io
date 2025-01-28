@@ -22,6 +22,7 @@ header {
     padding: 20px;
     background: linear-gradient(135deg, generales.$color-header-gradient, generales.$color-destacado);
     border-bottom: 2px solid generales.$color-destacado;
+    margin-bottom: 20px; // Espaciado para separar del siguiente elemento
 
     h1 {
         font-size: 2.5em;
@@ -39,7 +40,7 @@ nav {
     text-align: center;
     background-color: generales.$color-nav-bg;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto; // Espaciado adicional
     border-radius: 10px;
     border: 1px solid generales.$color-destacado;
     @include operaciones.box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
@@ -69,7 +70,7 @@ nav {
                 color: generales.$color-texto;
                 font-weight: bold;
                 font-size: 1.2em;
-                padding: 10px 20px;
+                padding: 12px 24px; // Botones más grandes y consistentes
                 border: 2px solid generales.$color-destacado;
                 border-radius: 5px;
                 @include operaciones.box-shadow(0, 3px, 5px, rgba(0, 0, 0, 0.4));
@@ -77,8 +78,8 @@ nav {
                 display: inline-block;
 
                 &:hover {
-                    background-color: generales.$color-destacado;
-                    color: generales.$color-texto;
+                    background-color: generales.$color-boton;
+                    color: generales.$color-boton-texto;
                     transform: translateY(-3px);
                 }
 
@@ -109,6 +110,6 @@ nav {
 
     nav ul li a {
         font-size: 1em;
-        padding: 8px 16px;
+        padding: 10px 16px; // Ajustar tamaño en pantallas pequeñas
     }
 }
