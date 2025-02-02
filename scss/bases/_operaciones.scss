@@ -1,6 +1,7 @@
 @use 'sass:color'; // Habilita el módulo de color
 @use '../bases/_generales' as generales;
 
+
 // Mixin para transiciones reutilizable
 @mixin transition($properties...) {
     transition: $properties;
@@ -34,25 +35,35 @@
 }
 
 // Transiciones generales para botones
-.btn {
-    @include transition(background-color 0.3s ease, transform 0.2s ease-in-out);
-
-    &:hover {
-        background-color: color.adjust(generales.$color-destacado, $lightness: -10%);
-        transform: scale(1.1);
-        @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
-    }
-}
-.button {
-    background-color: $color-boton;
-    color: $color-boton-texto;
+.btn-personalizado {
+    background-color: generales.$color-primario;
+    color: generales.$color-texto-boton;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    @include transition(background-color 0.3s ease, transform 0.2s ease-in-out);
 
     &:hover {
-        background-color: $color-boton-hover;
+        background-color: color.adjust(generales.$color-primario, $lightness: -10%);
+        transform: scale(1.05);
+        @include generales.box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+    }
+}
+
+
+
+.btn-personalizado {
+    background-color: $color-primario;
+    color: $color-texto-boton;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    @include transition(background-color 0.3s ease, transform 0.2s ease-in-out);
+
+    &:hover {
+        background-color: color.adjust($color-primario, $lightness: -10%);
+        transform: scale(1.05);
+        @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
     }
 }
 
